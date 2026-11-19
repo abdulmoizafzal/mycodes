@@ -1,0 +1,25 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    double usd, pkr;
+
+    // Example exchange rate; update before use.
+    const double exchangeRate = 280.0;
+
+    cout << "Enter amount in USD: ";
+    cin >> usd;
+
+    if (usd < 0) {
+        cout << "Invalid amount!";
+        return 0;
+    }
+
+    pkr = usd * exchangeRate;
+
+    cout << "USD: $" << usd << endl;
+    cout << "PKR: Rs. " << pkr << endl;
+
+    return 0;
+}
