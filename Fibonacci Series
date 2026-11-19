@@ -1,0 +1,26 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int terms;
+    int first = 0, second = 1;
+
+    cout << "Enter number of terms (1-46): ";
+    cin >> terms;
+
+    if (terms < 1 || terms > 46) {
+        cout << "Invalid input";
+        return 0;
+    }
+
+    for (int i = 1; i <= terms; i++) {
+        cout << first << " ";
+
+        int next = first + second;
+        first = second;
+        second = next;
+    }
+
+    return 0;
+}
