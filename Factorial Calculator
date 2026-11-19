@@ -1,0 +1,24 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    unsigned long long factorial = 1;
+
+    cout << "Enter a number (0-20): ";
+    cin >> number;
+
+    if (number < 0 || number > 20) {
+        cout << "Enter a number between 0 and 20.";
+        return 0;
+    }
+
+    for (int i = 1; i <= number; i++) {
+        factorial *= i;
+    }
+
+    cout << "Factorial: " << factorial;
+
+    return 0;
+}
